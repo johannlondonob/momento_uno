@@ -30,11 +30,7 @@ public class Main {
         if (isProducto) {
             System.out.print("Resultado del algoritmo 5: " + resultado + ". Los valores se multiplicaron.");
         } else {
-<<<<<<< HEAD
             System.out.print("Resultado del algoritmo 5: " + resultado + ". Los valores se sumaron.");
-        }
-=======
-            System.out.println("Resultado del algoritmo 5: " + resultado + ". Los valores se sumaron.");
         }
 
         int d;
@@ -100,6 +96,6 @@ public class Main {
                 break;
         }
         System.out.println("Cobrar: " + cantidadCobrar);
->>>>>>> 09f99d7d95e62ec891b16d1e58ee5571d7b866e9
+        scanner.close();
     }
 }
