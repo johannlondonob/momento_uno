@@ -31,7 +31,7 @@ public class Main {
         if (isProducto) {
             System.out.print("Resultado del algoritmo 5: " + resultado + ". Los valores se multiplicaron.");
         } else {
-            System.out.print("Resultado del algoritmo 5: " + resultado + ". Los valores se sumaron.");
+            System.out.println("Resultado del algoritmo 5: " + resultado + ". Los valores se sumaron.");
         }
 
         int d;
@@ -51,5 +51,33 @@ public class Main {
 
         System.out.println("Del número: " + d + " su cuadrado es: " + cuadrado + " y su raíz: " + raizCuadrada + ".");
 
+        System.out.println("Algoritmo 7");
+        int contadorNinias = 0, contadorNinios = 0, contadorPoblacion = 0;
+        double porcentajeNinias, porcentajeNinios;
+        boolean ok = true;
+
+        while (ok) {
+            contadorPoblacion++;
+            try {
+                System.out.print("Ingresa '1' si es niño o '2' si es niña: ");
+                int genero = scanner.nextInt();
+
+                if (genero == 2) {
+                    contadorNinias++;
+                } else {
+                    contadorNinios++;
+                }
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+
+            System.out.print("¿Continuar la encuesta? \n Presione 1, para seguir; cualquier tecla para detener: ");
+            int seguir = scanner.nextInt();
+            ok = seguir == 1;
+        }
+
+        porcentajeNinias = ((float) contadorNinias / (float) contadorPoblacion) * 100;
+        porcentajeNinios = ((float) contadorNinios / (float) contadorPoblacion) * 100;
+        System.out.println("Porcentaje niñas: " + porcentajeNinias + "%\nPorcentaje niños: " + porcentajeNinios + "%");
     }
 }
