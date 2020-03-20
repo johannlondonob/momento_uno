@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -45,7 +44,7 @@ public class Main {
             System.out.println("Error.");
             System.out.println("Se termina la ejecución.");
         } else {
-            cuadrado = Math.pow(d,2);
+            cuadrado = Math.pow(d, 2);
             raizCuadrada = Math.sqrt(d);
         }
 
@@ -79,5 +78,23 @@ public class Main {
         porcentajeNinias = ((float) contadorNinias / (float) contadorPoblacion) * 100;
         porcentajeNinios = ((float) contadorNinios / (float) contadorPoblacion) * 100;
         System.out.println("Porcentaje niñas: " + porcentajeNinias + "%\nPorcentaje niños: " + porcentajeNinios + "%");
+
+        System.out.println("Algoritmo 8");
+        String nombreMes = "";
+        double importe = 0.0f, cantidadCobrar = 0.0f;
+        System.out.print("Ingrese el nombre del mes: ");
+        nombreMes = scanner.next();
+        System.out.print("Ingrese el importe: ");
+        importe = scanner.nextDouble();
+
+        switch (nombreMes.toLowerCase()) {
+            case "octubre":
+                cantidadCobrar = importe - (importe * 0.15);
+                break;
+            default:
+                cantidadCobrar = importe * 1;
+                break;
+        }
+        System.out.println("Cobrar: " + cantidadCobrar);
     }
 }
